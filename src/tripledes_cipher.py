@@ -1,10 +1,7 @@
 from __future__ import annotations
-
 from Crypto.Cipher import DES3
 from Crypto.Util.Padding import pad, unpad
-
-from src.generacion_llaves import generate_3des_key, generate_iv
-
+from .utils import generate_3des_key, generate_iv
 
 def _normalize_3des_key(key: bytes) -> bytes:
     """
